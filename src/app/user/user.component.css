@@ -9,3 +9,10 @@ td{
     /* width: 100%; */
     border:1px solid black; 
 }
+.update{
+    padding: 20px;
+    background-color: green;
+    color: whitesmoke;
+    /* width: 100%; */
+    border:1px solid black; 
+}

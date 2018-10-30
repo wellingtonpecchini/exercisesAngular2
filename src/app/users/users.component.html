@@ -8,12 +8,14 @@
     <th>Telefono</th>
     <th>Provincia</th>
     <th>Cancella</th>
+    <th>Aggiungi</th>
   </tr>
   <tr 
   *ngFor="let user of users" 
   app-user 
   [user-data] = 'user'
   (userDeleted) = 'onDeleteUser($event)'
+  (userSelected) = 'onSelectedUser($event)'
   >
     <!-- <app-user [user-data] = "user" ></app-user> -->
   </tr>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/User';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import { User } from '../interfaces/user';
 export class UserService {
   users: User[]= [
     {
+      id: 1,
       name: 'Wellington ',
       lastname: 'Pecchini ', 
       email: 'wellingtonpecchini@gmail.com ',
@@ -16,6 +17,7 @@ export class UserService {
       phone:3334567896,
     },
     {
+      id: 2,
       name: 'Wellington2 ',
       lastname: 'Pecchini2 ', 
       email: 'wellingtonpecchini@gmail.com ',
@@ -24,6 +26,7 @@ export class UserService {
       phone:3334567896 ,
     },
     {
+      id: 3,
       name: 'Wellington3 ',
       lastname: 'Pecchini4 ', 
       email: 'wellingtonpecchini@gmail.com ',
@@ -45,6 +48,19 @@ export class UserService {
     if(index >= 0){
     this.users.splice(index, 1);
     }
+  }
+
+  // QUESTO NON HO CAPITO
+  newUpdateUser(user){
+    const idx = this.users.findIndex( (v) => v.id === user.id);
+    alert(idx);
+    if(idx !== -1){
+      this.users[idx] = user;
+    }
+  }
+
+  createUser(user:User){
+    this.users.splice(0, 0, user);
   }
 
 }

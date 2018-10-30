@@ -20,7 +20,7 @@
 }
 .form-footer{
     text-align: center;
-    paddign: 10px;
+    padding: 10px;
 }
 .form-group{
     padding: 10px;
@@ -36,6 +36,6 @@
 .form-group input{
     width: 150px;
     text-align: left;
-    paddign:5px;
+    padding:5px;
     border: 1px solid grey;
 }
